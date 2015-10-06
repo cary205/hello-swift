@@ -41,3 +41,27 @@ oddString.uppercaseString
 oddString == loweroddString   //case sensitive
 
 
+//Array===============================================================
+//declare array
+var emptyArray1 = Array<String>()
+var emptyArray2 = [String]()
+var mutableArray = [11, 22, 33, 44, 55]
+let immutableArray = ["aa", "bb", "cc"]
+
+//access elements in array
+let firstElement = mutableArray[0]
+let lastElement = mutableArray[mutableArray.count - 1]
+
+//array properties
+mutableArray.append(77)
+//immutableArray.append("QQ")   //ERROR!! immutable Array
+mutableArray.insert(0, atIndex: 3)
+mutableArray.removeAtIndex(2)
+mutableArray
+mutableArray.removeAll(keepCapacity: true)
+mutableArray.capacity
+mutableArray.removeAll()
+mutableArray.capacity
+
+
+
