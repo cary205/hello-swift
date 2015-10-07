@@ -64,4 +64,24 @@ mutableArray.removeAll()
 mutableArray.capacity
 
 
+//Dictionaries==============================================================
+//declare
+var emptyDictionary = [String : Int]()
+var emptyDictionary1 = Dictionary<String, Int>()
+
+var color = ["sky":"blue", "hair":"black", "banana":"yellow"]
+color["sky"]
+
+let optionalColor = color["sky"]
+let optionalColor2 = color["tree"]
+
+//add, change and remove (un-order)
+color
+color["cloud"] = "white"
+color
+color["sky"] = "lighrblue"
+color
+color["hair"] = nil
+color
+
 
