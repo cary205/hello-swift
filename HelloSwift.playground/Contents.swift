@@ -85,3 +85,51 @@ color["hair"] = nil
 color
 
 
+//Control Flow==============================================================
+//if - else
+if emptyArray1.isEmpty {
+    print("empty")   //println ERROR??  ==>>>see Apple's website. put print() instead of println()
+} else {
+    print("full")
+}
+
+//deal with optional
+var country = ["JAPAN", "CHINA", "INDIA"]
+//find : find the index of an element in an array
+//let index = find(country, "CHINA")   //find ERROR??
+let index = country.indexOf("CHINA")
+let index2 = country.indexOf("USA")
+
+//for - in
+//1 - 9
+for i in 1..<10 {
+    print(i)
+}
+//inclusive version: 1 - 10
+for i in 1...10 {
+    print(i)
+}
+
+//enumerate an array
+country
+for i in 0..<country.count {
+    print(country[i])
+}
+for name in country {
+    print(name)
+}
+
+//Dictionaries
+color
+for (key, value) in color{
+    key + "=" + value
+}
+
+//while (condition)
+var idx = 0
+while(idx < 15) {
+    print(idx)
+    idx++
+}
+
+
