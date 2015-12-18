@@ -8,6 +8,7 @@ var str = "Hello, playground"
 //variables
 var x = 100
 var y = 1.1
+var dou: Double = 10 //it's Double
 
 //constants
 let pi = 3
@@ -15,6 +16,9 @@ let pi = 3
 //operators
 var z = x + 200
 z * pi
+
+//convert type
+var intAndString = String(x) + str
 
 
 //String===============================================================
@@ -133,3 +137,49 @@ while(idx < 15) {
 }
 
 
+//Enumerations==============================================================
+enum Rank: Int {
+    case Ace = 1
+    case Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten
+    case Jack, Queen, King
+    func simpleDescription() -> String {
+        switch self {
+        case .Ace:
+            return "ace"
+        case .Jack:
+            return "jack"
+        case .Queen:
+            return "queen"
+        case .King:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+let ace = Rank.Ace
+let aceRawValue = ace.rawValue
+
+
+//Something to play---------------------------------------------------------------------------------------
+let optionalInt: Int? = nil
+//var actualInt: Int = optionalInt!
+var implicitlyUnwrappedOptionalInt: Int! = optionalInt
+
+var optionalName: String? = "123"
+var greeting = "Hello!"
+if var name = optionalName {
+    greeting = "Hello, \(name)"
+}
+var optionalHello: String? = "Hello"
+if let hello = optionalHello where hello.hasPrefix("H"), let name = optionalName {
+    greeting = "\(hello), \(name)"
+}
+
+//var one_a = 1
+//var two_a = 2
+if var one_a :Int? = nil where one_a == nil, var two_a :Int? = 2{
+    print("OO")
+} else {
+    print("XX")
+}
